@@ -12,9 +12,9 @@ class Solution {
         else {
         	StringBuilder strBuilder = new StringBuilder();
 	    	Set<Character> correctedStrSet = new HashSet<>();
-	    	for (char partOfStr : str.toCharArray()) {
-    	 	   if (correctedStrSet.add(partOfStr)) {
-        		    strBuilder.append(partOfStr);
+	    	for (char letterOfStr : str.toCharArray()) {
+    	 	   if (correctedStrSet.add(letterOfStr)) {
+        		    strBuilder.append(letterOfStr);
         		}
         	}
             return strBuilder.toString();
