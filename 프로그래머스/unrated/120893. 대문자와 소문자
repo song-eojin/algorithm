@@ -1,0 +1,24 @@
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String str = br.readLine();
+        char[] strArray = str.toCharArray();
+
+        for(int i=0; i< strArray.length; i++) {
+
+            if (strArray[i] > 91) {
+                bw.write(Character.toUpperCase(strArray[i]));
+            } else {
+                bw.write(Character.toLowerCase(strArray[i]));
+            }
+        }
+
+        br.close();
+        bw.flush();
+        bw.close();
+    }
+}
