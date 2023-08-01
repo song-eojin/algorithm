@@ -14,6 +14,5 @@ public class Solution {
         bw.flush();
         br.close();
         bw.close();
-
     }
 }
