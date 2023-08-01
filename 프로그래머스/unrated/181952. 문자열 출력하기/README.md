@@ -4,7 +4,8 @@
 
 ### 성능 요약
 
-메모리: 63.9 MB, 시간: 161.77 ms
+BufferedReader와 BufferedWriter 사용시, 메모리: 62.5 MB, 시간: 131.02 ms
+Scanner 사용시, 메모리: 63.9 MB, 시간: 161.77 ms
 
 ### 구분
 
