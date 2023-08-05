@@ -1,25 +1,21 @@
 class Solution {
     public String solution(String code) {
-        StringBuilder ret = new StringBuilder();
-
         int mode = 0;
-        for (int i = 0; i < code.length(); i++) {
-            if (code.charAt(i) == '1') {
-                mode = isZero(mode) ? 1 : 0;
-            } else {
-                ret.append(isZero(mode) ? isEven(i) ? code.charAt(i) : "" : !isEven(i) ? code.charAt(i) : "");
+        String answer = "";
+        
+        for(int idx=0; idx<code.length(); idx++) {
+            char value = code.charAt(idx);
+            if(value=='1') {
+                mode = 1-mode;
+            }
+            else if(mode==0 && idx%2==0) {
+                answer += value;
+            }
+            else if(mode==1 && idx%2==1) {
+                answer += value;
             }
         }
-        return ret.toString().isEmpty() ? "EMPTY" : ret.toString();
-    }
-    
-		// 현재 mode가 0인지
-    private Boolean isZero(int mode) {
-        return mode == 0;
-    }
-
-		// 값이 짝수인지
-    private Boolean isEven(int num) {
-        return num % 2 == 0;
+        
+        return answer.length()==0 ? "EMPTY" : answer;
     }
 }
